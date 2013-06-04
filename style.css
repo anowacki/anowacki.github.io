@@ -1,0 +1,221 @@
+
+/* Style Sheet for MEFTLG James Wookey, 2006-2011. Based on W3C CSS (see notice below) */
+
+/*
+   Copyright 1997-2003 W3C (MIT, ERCIM, Keio). All Rights Reserved.
+   The following software licensing rules apply:
+   http://www.w3.org/Consortium/Legal/copyright-software */
+
+/* $Id: base.css,v 1.24 2003/04/17 13:56:40 bbos Exp $ */
+
+/* -------------------------------------------
+   Allow footer to be always at bottom of page
+   Tip from: http://ryanfait.com/sticky-footer
+   ------------------------------------------- */
+* {margin: 0;}
+html, body { height: 100%; }
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -3em; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 3em; /* .push must be the same height as .footer */
+}
+
+
+body {
+  padding: 0em 2em 0em 2em; 
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif;
+  color: black;
+  background: white;
+  background-position: top left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+:link { color: #B01C2e; background: transparent; text-decoration: none; border-bottom: 1px #B01C2e dotted; }
+:visited { color: #700000; background: transparent }
+a:active { color: #B01C2e; background: transparent }
+@media screen {  /* hide from IE3 */
+  a[href]:hover { background: #FEE; text-decoration: none }
+}
+
+img, a:link img, a:visited img, a:active img { border-style: none } /* no border on img links */
+
+a img { color: white; }        /* trick to hide the border in Netscape 4 */
+@media all {                   /* hide the next rule from Netscape 4 */
+  a img { color: inherit; }    /* undo the color change above */
+}
+
+th, td { /* ns 4 */
+  font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { text-align: left ; margin-bottom: 1em; }
+/* background should be transparent, but WebTV has a bug */
+h1, h2, h3, h4 { color: #B01C2e; background: white }
+h1 { font: 170% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif }
+h2 { font: 140% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif }
+h3 { font: 120% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif }
+h4 { font: 100% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif }
+h5 { font: italic 100% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif }
+h6 { font: small-caps 100% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif }
+
+.hide { display: none }
+
+div.head { margin-bottom: 1em }
+div.head h1 { margin-top: 2em; clear: both }
+div.head table { margin-left: 2em; margin-top: 2em }
+
+/* ---------------------
+   Navigation bar styles 
+   --------------------- */
+/* ---- Top navigation --- */
+#nav { 
+	font: 100% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: #b01c2e; /* Bristol University red */
+	clear: both;
+	overflow: hidden;
+	border: none;
+}
+#nav ul{margin:0; padding:0; float:left;}
+#nav ul li{
+	float:left; 
+	padding:0;
+	margin:0;
+	width:auto;
+	display:block;
+	white-space:nowrap;
+}
+#nav ul li a{
+	color:white; 
+	text-decoration: none;
+	background:transparent; 
+	display:block;
+	padding:0.5em 0.5em 0.5em 0.5em;
+	margin:0;
+	width:auto;
+	border-right: 1px solid white;
+	border-bottom: none;
+}
+#nav ul li.active{background: #d03c4e;} /* Active page is shown by <li class="active"></li> */
+#nav ul li a:hover{background: #d03c4e; color: #fff}
+#nav ul li.first a{padding-left:1em;}
+#nav ul li.last a{border:none;}
+
+/* ---- Bottom navigation ---- */
+#nav-bottom { 
+	font: 70% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif;
+	color: white;
+/*
+	margin-top: 1em;
+	margin-bottom: 0.25em;
+*/
+	background-color: #B01C2e;
+	clear: both;
+	overflow: hidden;
+}
+#nav-bottom ul{margin:0; padding:0; float:left;}
+#nav-bottom ul li{
+	float:left; 
+	padding:0;
+	margin:0;
+	width:auto;
+	display:block;
+	white-space:nowrap;
+}
+#nav-bottom ul li a{
+	color:white; 
+	text-decoration: none;
+	background:transparent; 
+	display:block;
+	padding:0.5em 0.5em 0.5em 0.5em;
+	margin:0;
+	width:auto;
+	border-right: 1px solid white;
+	border-bottom: none;
+}
+#nav-bottom ul li a:hover{background: #d03c4e; color: #fff}
+#nav-bottom ul li.first a{padding-left:1em;}
+#nav-bottom ul li.last a{float:right; border:none; clear:both}
+.webmaster { font-size: 65%; text-align: right }
+
+
+/* ---------------
+   Paragraph text
+   --------------- */
+.para p{max-width:800px; margin-left:auto; margin-right:auto;}
+
+/* ---------------
+   People boxes
+   --------------- */
+#people { margin-top: 1em; margin-bottom: 2em; }
+#people ul { list-style-type: none; }
+#people ul li { min-height: 75px; margin-top: 2em; }
+#people img { float: left; padding-right: 0.5em; padding-bottom: auto; width: 75px; height: 75px}
+
+#collaborators { margin-top: 1em; margin-bottom: 2em; }
+#collaborators ul { list-style-type: none; }
+#collaborators ul li { margin-bottom: 0.5em; }
+
+/* ---------------
+   Figure styles
+   --------------- */
+.caption {
+	font-size: small;
+	margin-bottom: 2em;
+	text-align: center;
+}
+.figure { display: block; margin-left: auto; margin-right: auto; }
+.figure img { margin-top: 1em; margin-bottom: 0.5em; margin-left:auto; margin-right: auto; }
+
+/* ---------------
+   Publications
+   --------------- */
+#pubs {margin-top: 1em; margin-bottom: 1em; }
+#pubs ol li { font-size: 90%; margin-bottom: 1em; padding-right: 2em; }
+#pubs ul li { font-size: 90%; margin-bottom: 1em; padding-right: 2em; }
+
+
+/* ---------------
+   General classes for layout
+   --------------- */
+.center { text-align: center; position: center; }
+.small { font-size: 75%; max-width: 60em; padding-left: 85px}
+.indent { margin-left: 2em; margin-bottom: 2em; max-width: 960px}
+
+ul.plain li { list-style-type: none; }
+
+p { margin-bottom: 1em; }
+p.copyright { font-size: small }
+p.copyright small { font-size: small }
+
+pre { color: #880000; margin-left: 2em }
+code { font-family: monospace } 
+.code { font-family: monospace; font-size: 130%; }
+
+pre, code { font: 130% monospace } /* navigator 4 requires this */
+
+
+warning { color: #880000; font: 120% sans-serif }
+
+itag { color: #005A9C; font: bold 100% sans-serif "test"}
+/* code { color: #007700 } */
+
+ltag { color: #005A9C; font: Trebuchet MS, Arial, Helvetica, sans-serif "test"}
+/* code { color: #007700 } */
+
+dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
+dt { font-weight: bold }
+
+pre, code { font-family: monospace } /* navigator 4 requires this */
+
+ul.toc {
+  list-style: disc;		/* Mac NS has problem with 'none' */
+  list-style: none;
+}
+
