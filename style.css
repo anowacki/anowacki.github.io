@@ -67,6 +67,19 @@ h6 { font: small-caps 100% "Lucida Grande", "Lucida Sans Unicode", Helvetica, sa
 div.head { margin-bottom: 1em }
 div.head h1 { margin-top: 2em; clear: both }
 div.head table { margin-left: 2em; margin-top: 2em }
+/* ----------------
+   Title text style
+   ---------------- */
+#title {
+	font: "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	margin-top: 1em;
+}
+#title h1 { font: 150%; }
+#title h2 { font: 100%; }
+
+
 
 /* ---------------------
    Navigation bar styles 
