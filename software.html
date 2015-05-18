@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 TRANSITIONAL//EN">
+<HTML>
+<HEAD>
+	<link rel="STYLESHEET" href="style.css" type="text/css">
+	<link rel="Shortcut Icon" type="image/x-icon" href="http://www.leeds.ac.uk/site/favicon.ico">
+   <TITLE>Software - Andy Nowacki</TITLE>
+
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<!-- wrapper div contains all content apart from bottom navigation -->
+<div class="wrapper">
+	<!-- Title -->
+	<table border=0 cellspacing=0 width="100%" height=70>
+		<tr>
+			<!-- My picture -->
+			<td align=left width="75">
+				<a href="index.html"><img SRC="images/Nowacki_headshot.jpeg" ALIGN="middle" height="70" width="70" alt="Andy Nowacki">
+			</td>
+			<!-- Name -->
+			<td align="left" valign="bottom" height="50">
+				<H2><a href="index.html">Andy Nowacki</a></H2>
+			</td>
+			<!-- Leverhulme logo -->
+			<td align="left" width="140">
+				<a href="http://www.leverhulme.ac.uk/"><img src="images/LeverhulmeLogo.png" height="69" width="125" alt="Leverhulme Trust"></a>
+			</td>
+			<!-- Leeds logo -->
+			<td align="right" width="130">
+				<a href="http://www.leeds.ac.uk/"><img src="images/LeedsLogo.png" height="45" alt="University of Leeds"></a>
+			</td>
+		</tr>
+	</table>
+
+
+	<!-- Navigation -->
+	<div id="nav">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="publications.html">Publications</a></li>
+			<li class="active"><a href="software.html">Software</a></li>
+			<!-- <li><a href="models.html">Models</a></li>
+			<li><a href="contact.html">Contact</a> -->
+		</ul>
+	</div>
+
+
+	<!-- Content - set maximum width of 725 px -->
+	<div style="margin-left: auto; margin-right: auto; max-width: 725">
+		<!-- Codes -->
+		<div id="codes">
+			<h3>Software available to the community</h3>
+			<p>
+				I maintain several software packages which provide functionality which may be useful to the geophysicist.  Most codes rely on <a href="http://gmt.soest.hawaii.edu/">GMT</a> for plotting.  I have tried to document the software, but there are gaps and functionality may be incomplete.  I&rsquo;m afraid I cannot offer any support for these, but if you make any improvements, send me a pull request and may be able to incorporate your changes into the codebase.
+			</p>
+			<p>
+				The following codes are hosted at my <a href="https://github.com/anowacki/">GitHub pages</a>:
+			</p>
+			<ul>
+				<li>
+					<h4><a href="https://github.com/anowacki/seismo-fortran">Geophysics utility routines</a></h4>
+					<p>
+						General utility modules for dealing with various geophysical
+						problems, including:
+						<ul>
+							<li>anisotropy_ajn.f90, for dealing with 
+								anisotropic sets of elastic constants</li>
+							<li>global_1d_models.f90, for getting 1D Earth
+								properties from PREM and AK135</li>
+							<li>plate_motion.f90, to compute absolute and relative
+								plate motion from various models</li>
+							<li>spherical_splines, allowing fitting of arbitrary
+								functions onto spherical B-splines</li>
+							<li>splitwave, modelling shear wave splitting in
+								anisotropic media along precomputed ray paths</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<h4><a href="https://github.com/anowacki/elasticity">Elasticity</a> &ndash; Anisotropic modelling on the command line</h4>
+					<p>
+						Making use of seismo-fortran, this repo gives contains
+						many small command-line programs for manipulating and
+						plotting first-order general elastic constants.
+					</p>
+					<img class="figure" src="images/Kimberlites_Ismail_Mainprice_1998.png">
+					<p class="caption">
+						3D view of the shear wave splitting produced by a kimberlite
+						as given by Ben Isma&iuml;l and Mainprice, Tectonophysics, 1998,
+						produced using CIJ_plot from the repo.
+					</p>
+				</li>
+				<li>
+					<h4><a href="https://github.com/anowacki/f90rad3">f90rad3</a> &ndash; Command-line GPR</h4>
+					<p>
+						Fortran codes to deal with RAD3-format data as produced by,
+						for example, Mal&aring; ground-penetrating radar units.
+						Many proprietary or graphical programs exist for processing
+						such data, but few offer any automated way to create plots
+						and filter the data.  These codes aim to make that process
+						easier.
+					</p>
+					<p>
+						Output options include making sections and writing to 
+						NetCDF for visualisation in your 3D program of choice (such 
+						as Paraview).
+					</p>
+					<img class="figure" src="images/f90rad3_example.jpg" width="436" height="319">
+					<p class="caption">
+						3D GPR volume, viewed in Paraview, and created by f90rad3.
+					</p>
+				</li>
+			</ul>
+		</div>
+
+	</div> <!-- Wrapper for content to set maximum width -->
+
+	<!-- push class fills in blank space to keep navigation at bottom -->
+	<div class="push"></div>
+</div>
+
+<!-- Bottom navigation -->
+<div class="footer">
+	<div id="nav-bottom">
+		<ul>
+			<li><A HREF="index.html">Home</A></li>
+			<li><a href="http://www.see.leeds.ac.uk/research/igt/deep-earth-research/">Deep Earth group</a></li>
+			<li><A HREF="http://www.see.leeds.ac.uk/">School of Earth and Environment</A></li>
+			<li><A HREF="http://www.bristol.ac.uk/">University of Leeds</A></li>
+		</ul>
+	</div>
+	<div class="webmaster">
+		Site maintained by <a href="mailto:andy.nowacki@bristol.ac.uk">Andy Nowacki</a>
+	</div>
+</div>
+
+</BODY>
+</HTML>
+
