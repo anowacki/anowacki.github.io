@@ -200,7 +200,7 @@ div.head table { margin-left: 2em; margin-top: 2em }
 .center { text-align: center; position: center; }
 .small { font-size: 75%; max-width: 60em; padding-left: 85px}
 .indent { margin-left: 2em; margin-bottom: 2em; max-width: 960px}
-
+    
 ul.plain li { list-style-type: none; }
 
 p { margin-bottom: 1em; }
