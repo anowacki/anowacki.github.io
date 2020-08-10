@@ -47,14 +47,58 @@
 		<div id="codes">
 			<h3>Software available to the community</h3>
 			<p>
-				I maintain several software packages which provide functionality which may be useful to the geophysicist.  Most codes rely on <a href="http://gmt.soest.hawaii.edu/">GMT</a> for plotting.  I have tried to document the software, but there are gaps and functionality may be incomplete.  I&rsquo;m afraid I cannot offer any support for these, but if you make any improvements, send me a pull request and may be able to incorporate your changes into the codebase.
+				I maintain several software packages which provide functionality which may be useful to the geophysicist.  Bug reports and pull requests to
+				add functionality are welcome, and I will try to see to these in a
+				reasonable time frame.
 			</p>
 			<p>
-				The following codes are hosted at my <a href="https://github.com/anowacki/">GitHub pages</a>:
+				The following codes&mdash;and other useful packages&mdash;are
+				hosted at my <a href="https://github.com/anowacki/">GitHub pages</a>:
 			</p>
 			<ul>
 				<li>
-					<h4><a href="https://github.com/anowacki/seismo-fortran">Geophysics utility routines</a></h4>
+					<h4><a href="https://github.com/anowacki/Seis.jl">Seis.jl</a> &ndash; a fast, flexible package for dealing with seismic data</h4>
+					<p>
+						Seis.jl is a <a href="https://julialang.org">Julia</a>
+						package for dealing with seismic data.  It is fast
+						(many times faster than Obspy for most operations),
+						flexible, and open source.
+					</p>
+					<p>
+						Seis.jl provides the basics building blocks to process data
+						(e.g., filtering), and other packages build on top of Seis.jl's
+						basic types to provide other functionality:
+						<ul>
+						<li>
+							<a href="https://github.com/anowacki/SeisSplit.jl">SeisSplit.jl</a>: Shear wave splitting analysis.
+						</li>
+						<li>
+							<a href="https://github.com/anowacki/Beamforming.jl">Beamforming.jl</a>: Beamforming with seismic arrays.
+						</li>
+						<li>
+							<a href="https://github.com/anowacki/SeisRequests.jl">SeisRequests.jl</a>: Download seismic data from IRIS and other
+							data centres.
+						</li>
+						</ul>
+					</p>
+				</li>
+                <li>
+                    <h4><a href="https://github.com/anowacki/CIJ.jl">CIJ.jl</a> &ndash; Anisotropy in Julia</h4>
+                    <p>
+                        A package to deal with elastic constants for geophysics problems,
+                        including computing velocities from arbitrary elastic constants.
+                    </p>
+                </li>
+                <li>
+                	<h4><a href="https://github.com/anowacki/SeisModels.jl">SeisModels.jl</a> &ndash; Global seismic models</h4>
+                	<p>
+                		Obtain seismic and other physical properties at any point
+                		in the Earth for various Global seismic models, including
+                		computing gravity, moment of intertia, and so on.
+                	</p>
+                </li>
+				<li>
+					<h4><a href="https://github.com/anowacki/seismo-fortran">Fortran geophysics utility libraries</a></h4>
 					<p>
 						General utility modules for dealing with various geophysical
 						problems, including:
@@ -86,23 +130,6 @@
 						produced using CIJ_plot from the repo.
 					</p>
 				</li>
-                <li>
-                    <h4><a href="https://github.com/anowacki/CIJ.jl">CIJ.jl</a> &ndash; Anisotropy in Julia</h4>
-                    <p>
-                        A <a href="http://julialang.org">Julia</a> package to deal with
-                        elastic constants for geophysics problems.
-                    </p>
-                </li>
-				<li>
-					<h4><a href="https://github.com/anowacki/SAC.jl">SAC.jl</a>
-						&ndash; Manipulate Seismic Analysis Code files in Julia</h4>
-					<p>
-						A Julia package to deal with seismic data in the SAC format.
-						Accompanying package
-						<a href="https://github.com/anowacki/SACPlot.jl">SACPlot.jl</a>
-						provides plotting for SAC traces.
-					</p>
-				</li>
 				<li>
 					<h4><a href="https://github.com/anowacki/f90rad3">f90rad3</a> &ndash; Command-line GPR</h4>
 					<p>
@@ -121,24 +148,6 @@
 					<img class="figure" src="images/f90rad3_example.jpg" width="436" height="319">
 					<p class="caption">
 						3D GPR volume, viewed in Paraview, and created by f90rad3.
-					</p>
-				</li>
-			</ul>
-		</div>
-		<!-- Utilities -->
-		<div id="utilities">
-			<h3>Other utilities</h3>
-			<p>
-				Alongside explicitly scientific software, I also maintain a few
-				small utility configuration files, and so on.
-			</p>
-			<ul>
-				<li>
-					<h4><a href="https://github.com/anowacki/JuliaUnicode.tmbundle">JuliaUnicode.tmbundle</a></h4>
-					<p>
-						Plugin to <a href="https://github.com/textmate/textmate">TextMate 2</a>
-						allowing one to use LaTeX symbol names and tab-completion
-						to insert Unicode characters when editing <a href="https://julialang.org">Julia</a> source files.
 					</p>
 				</li>
 			</ul>
